@@ -5,12 +5,16 @@ async function clickFollowButtons() {
     // Use a loop to click the buttons
     for (let indeks = 0; indeks < buttons.length; indeks++) {
         // Use a hold function to wait for a button click
-        await wait(1000); // 1000ms = 1s
+        await wait(1000); // 1000ms = 1s delay
         // Click button
         buttons[indeks].click();
         // Log the clicked button
         console.log(`Clicked Button #${indeks + 1}`);
     }
+    // After clicking all buttons, reload the page
+    setTimeout(() => {
+        location.reload();
+    }, 3000); // Wait 5 seconds (3000ms) before reloading the page
 }
 
 // A function to wait for a specified time
