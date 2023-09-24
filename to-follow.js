@@ -1,20 +1,21 @@
-function clickFollowButtons() {
-  // Select all buttons with the specified CSS class
-  var butonlar = document.querySelectorAll('.artdeco-button:not(.artdeco-button--muted)');
-
-  // Click a button every second
-  var indeks = 0;
-  var interval = setInterval(function() {
-    // Clear range after clicking all buttons
-    if (indeks >= butonlar.length) {
-      clearInterval(interval);
-      return;
+// Let's write the clickFollowButtons() function using async/await
+async function clickFollowButtons() {
+    // Select all buttons with the specified CSS class
+    let buttons = document.querySelectorAll('.artdeco-button:not(.artdeco-button--muted)');
+    // Use a loop to click the buttons
+    for (let indeks = 0; indeks < buttons.length; indeks++) {
+        // Use a hold function to wait for a button click
+        await wait(1000); // 1000ms = 1s
+        // Click button
+        buttons[indeks].click();
+        // Log the clicked button
+        console.log(`Clicked Button #${indeks + 1}`);
     }
+}
 
-    // Click button
-    butonlar[indeks].click();
-    indeks++;
-  }, 1000); // 1000ms = 1s
+// A function to wait for a specified time
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // Call the function
