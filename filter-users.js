@@ -4,9 +4,10 @@ const keywords = ["php", "laravel", "backend", "back-end", "nodejs", "node.js"];
 // Let's write the filterItems() function using async/await
 const filterItems = () => {
     // Select all items
-    const items = document.querySelectorAll('.entity-result__item');
+    const items = document.querySelectorAll('.OZRCdhYdUCjImLkIDoGWQDNrfzjyGPOLjvHwW');
     // Keep track of how many items we've deleted
     let deletedCount = 0;
+    let stayedCount = 0;
     // Loop through all items
     items.forEach((item) => {
         // Select the subtitle element
@@ -21,11 +22,14 @@ const filterItems = () => {
             if (!containsKeyword) {
                 item.remove();
                 deletedCount++;
+            } else {
+                stayedCount++;
             }
         }
     });
-    // Log the number of deleted items
+    // Log the number of deleted and stayed items
     console.log(`Deleted ${deletedCount} items`);
+    console.log(`Stayed ${stayedCount} items`);
 }
 
 // Call the function
