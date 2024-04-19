@@ -3,13 +3,13 @@ async function clickFollowButtons() {
     // Select all buttons with the specified CSS class
     let buttons = document.querySelectorAll('.artdeco-button:not(.artdeco-button--muted)');
     // Use a loop to click the buttons
-    for (let indeks = 0; indeks < buttons.length; indeks++) {
+    for (let i = 0; i < buttons.length; i++) {
         // Use a hold function to wait for a button click
         await wait(1000); // 1000ms = 1s delay
         // Click button
-        buttons[indeks].click();
+        buttons[i].click();
         // Log the clicked button
-        console.log(`Clicked Button #${indeks + 1}`);
+        console.log(`Clicked Button #${i + 1}`);
     }
     // After clicking all buttons, reload the page
     setTimeout(() => {
