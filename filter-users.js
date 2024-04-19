@@ -1,5 +1,5 @@
 // This script will filter out users that do not contain any of the keywords
-const keywords = ["php", "laravel", "backend", "back-end", "nodejs", "node.js"];
+const keywords = ["php", "laravel", "backend", "back-end", "back end", "nodejs", "node.js"];
 
 // Let's write the filterItems() function using async/await
 const filterItems = () => {
