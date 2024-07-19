@@ -4,7 +4,7 @@ const keywords = ["php", "laravel", "backend", "back-end", "back end", "nodejs",
 // Let's write the filterItems() function using async/await
 const filterItems = () => {
     // Select all items
-    const items = document.querySelectorAll('.bbxqAqilZpWnGiGMbgXjsmdtdiOQbzOc');
+    const items = document.querySelectorAll('.HPCFzQGPFHEMdStCIqoBCVPecKilVkFrWJGwqHog');
     // Keep track of how many items we've deleted
     let deletedCount = 0;
     let stayedCount = 0;
